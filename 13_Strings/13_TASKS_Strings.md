@@ -10,24 +10,6 @@
     console.log(str); // "Javascript"
 ```
 
-<details>
-    <summary>Решение: </summary>
-
-```
-// 1 решение
-str = str.at(0).toUpperCase() + str.substring(1);
-
-// 2 решение
-str = str[0].toUpperCase() + str.substring(1);
-
-// 3 решение
-str = `${str.at(0).toUpperCase()}${str.slice(1)}`;
-
-// 4 решение
-str = str.replace("j", "J");
-```
-</details>
-
 <hr/>
 
 **2 задача:**
@@ -39,24 +21,6 @@ str = str.replace("j", "J");
 
     console.log(str); // "JavaScript"
 ```
-
-<details>
-    <summary>Решение: </summary>
-
-```
-// 1 решение
-str = str.at(0).toUpperCase() + str.substring(1, 4) + str.at(4).toUpperCase() + str.substring(5);
-
-// 2 решение
-str = str.replace("j", "J").replace("s", "S");
-
-// 3 решение
-str = str.split("");
-str[0] = str[0].toUpperCase();
-str[4] = str[4].toUpperCase();
-str = str.join("");
-```
-</details>
 
 <hr/>
 
@@ -78,8 +42,70 @@ str = str.join("");
     console.log(isBlockedComment3); // true or false
 ```
 
+<hr/>
+
+**4 задача:**
+
+Удалите символы `$#@&` из строки ` $#$  Hello @$&#World! `
+
+```JavaScript
+    let str = " $#$  Hello @$&#World! ";
+
+    console.log(str); // "Hello World"
+```
+
+<hr/>
+<hr/>
+<hr/>
+<hr/>
+<hr/>
+<hr/>
+<hr/>
+<hr/>
+<hr/>
+<hr/>
+
+**Решения:**
+
+
 <details>
-    <summary>Решение: </summary>
+    <summary>Решение - Задача 1: </summary>
+
+```
+// 1 решение
+str = str.at(0).toUpperCase() + str.substring(1);
+
+// 2 решение
+str = str[0].toUpperCase() + str.substring(1);
+
+// 3 решение
+str = `${str.at(0).toUpperCase()}${str.slice(1)}`;
+
+// 4 решение
+str = str.replace("j", "J");
+```
+</details>
+
+<details>
+    <summary>Решение - Задача 2: </summary>
+
+```
+// 1 решение
+str = str.at(0).toUpperCase() + str.substring(1, 4) + str.at(4).toUpperCase() + str.substring(5);
+
+// 2 решение
+str = str.replace("j", "J").replace("s", "S");
+
+// 3 решение
+str = str.split("");
+str[0] = str[0].toUpperCase();
+str[4] = str[4].toUpperCase();
+str = str.join("");
+```
+</details>
+
+<details>
+    <summary>Решение - Задача 3: </summary>
 
 ```
 // 1 решение
@@ -94,20 +120,8 @@ isBlockedComment3 = comment3.toLowerCase().indexOf("fuck") !== -1;
 ```
 </details>
 
-<hr/>
-
-**4 задача:**
-
-Удалите символы `$#@&` из строки ` $#$  Hello @$&#World! `
-
-```JavaScript
-    let str = " $#$  Hello @$&#World! ";
-
-    console.log(str); // "Hello World"
-```
-
 <details>
-    <summary>Решение: </summary>
+    <summary>Решение - Задача 4: </summary>
 
 ```
 // 1 решение
@@ -117,5 +131,3 @@ str = str.replaceAll("$", "").replaceAll("#", "").replaceAll("@", "").replaceAll
 str = str.replace(/[$#@&]/g, "").trim();
 ```
 </details>
-
-<hr/>

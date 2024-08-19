@@ -1,4 +1,4 @@
-# Задачи (строки)
+# Задачи (дата и время)
 
 **1 задача:**
 
@@ -9,14 +9,6 @@
 
     console.log(d); // Thu Jan 13 2028 13:23:00
 ```
-
-<details>
-    <summary>Решение: </summary>
-
-```
-const d = new Date(2028, 0, 13, 13, 23);
-```
-</details>
 
 <hr/>
 
@@ -29,14 +21,6 @@ const d = new Date(2028, 0, 13, 13, 23);
 
     console.log(years); // 54 в 2024 году
 ```
-
-<details>
-    <summary>Решение: </summary>
-
-```
-const years = Math.floor(Date.now() / 1000 / 60 / 60 / 24 / 365);
-```
-</details>
 
 <hr/>
 
@@ -53,8 +37,63 @@ const years = Math.floor(Date.now() / 1000 / 60 / 60 / 24 / 365);
     console.log(todayRU); // среда, 14 августа 2024 г. в 20:34
 ```
 
+<hr/>
+
+**4 задача:**
+
+Сколько минут осталось до завтра?
+
+```JavaScript
+    const now = new Date();
+    const tomorrow = ??;
+    const minutesBeforeTomorrow = ??;
+
+    console.log(minutesBeforeTomorrow); // ??
+```
+
+<hr/>
+
+**5 задача:**
+
+Определите последние число февраля месяца 2024 года
+
+```JavaScript
+    const lastNumberOfMonth = ??;
+
+    console.log(lastNumberOfMonth); // 29
+```
+
+<hr/>
+<hr/>
+<hr/>
+<hr/>
+<hr/>
+<hr/>
+<hr/>
+<hr/>
+<hr/>
+<hr/>
+
+**Решения:**
+
 <details>
-    <summary>Решение: </summary>
+    <summary>Решение - Задача 1: </summary>
+
+```
+const d = new Date(2028, 0, 13, 13, 23);
+```
+</details>
+
+<details>
+    <summary>Решение - Задача 2: </summary>
+
+```
+const years = Math.floor(Date.now() / 1000 / 60 / 60 / 24 / 365);
+```
+</details>
+
+<details>
+    <summary>Решение - Задача 3: </summary>
 
 ```
 const d = new Date();
@@ -79,22 +118,8 @@ const todayRU = d.toLocaleString("ru-RU", {
 ```
 </details>
 
-<hr/>
-
-**4 задача:**
-
-Сколько минут осталось до завтра?
-
-```JavaScript
-    const now = new Date();
-    const tomorrow = ??;
-    const minutesBeforeTomorrow = ??;
-
-    console.log(minutesBeforeTomorrow); // ??
-```
-
 <details>
-    <summary>Решение: </summary>
+    <summary>Решение - Задача 4: </summary>
 
 ```
 const now = new Date();
@@ -105,20 +130,8 @@ const minutesBeforeTomorrow = Math.round(diff / 1000 / 60);
 ```
 </details>
 
-<hr/>
-
-**5 задача:**
-
-Определите последние число февраля месяца 2024 года
-
-```JavaScript
-    const lastNumberOfMonth = ??;
-
-    console.log(lastNumberOfMonth); // 29
-```
-
 <details>
-    <summary>Решение: </summary>
+    <summary>Решение - Задача 5: </summary>
 
 ```
 const lastNumberOfMonth = new Date(2024, 2, 0);
