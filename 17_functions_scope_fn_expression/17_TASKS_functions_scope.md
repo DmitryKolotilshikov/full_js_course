@@ -1,4 +1,4 @@
-# Задачи (functions base)
+# Задачи (functions scope)
 
 **1 задача:**
 
