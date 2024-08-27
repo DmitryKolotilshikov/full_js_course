@@ -96,13 +96,14 @@ showScopeExample();
 // function formatGreeting(name, emoji = "👽") {
 //     log(`Hello ${name} ${emoji}`);
 // }
-
 function formatGreeting(name, emoji = "👽") {
     return `Hello ${name} ${emoji}`;
 }
 
-formatGreeting("Dmitry", "💥");
-formatGreeting("Dmitry");
+log(formatGreeting("Dmitry", "😊👉"));
+log(formatGreeting("Dmitry"));
 
-const formattedGreeting = formatGreeting("Dmitry", "😊💥😊");
-log(formattedGreeting);
+// const formattedGreeting = formatGreeting("Dmitry", "😊💥😊"); // результат работы функции
+const formattedGreeting = formatGreeting; // function expression
+
+log(formattedGreeting("Dmitry", "😊💥😊"));
