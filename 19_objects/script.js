@@ -38,6 +38,8 @@ log(person.age);
 
 log(person["name"]);
 
+// -------
+
 log(person.isDeveloper);
 log(person.isPositive); // undefined, так как свойство отсутствует. но не ошибка
 
@@ -63,7 +65,7 @@ person.greetSecond();
 const firstName = person.name;
 log(firstName);
 
-person.name = "Alex";
+person.name = "Alex"; // у объекта созданного с помощью const значение в свойстве можно менять
 log(person.name, firstName);
 
 // ------
