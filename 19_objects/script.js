@@ -11,8 +11,9 @@
 const log = console.log;
 
 const hobby = "hobby";
-const id = "13#smI!(#)LC";
+const id = "13#smIsd@!";
 
+// const p = new Object()
 const person = {
     name: "Dmitry",
     age: 33,
@@ -24,70 +25,72 @@ const person = {
     },
     0: "just 0",
     "last name": "Miracle",
-    greet: function () {
-        log(`Hello, I am Dmitry`)
+    greet: function() {
+        log("Hello, I am Dmirty! [1]")
     },
-    greetSecond: () => log(`Hello, I am Dmitry`),
+    greetSecond: () => log("Hello, I am Dmitry! [2]"),
     [hobby]: "skiing, coding",
-    id
+    // id: id,
+    id,
 }
 
 log(person);
 log(person.name);
 log(person.age);
-
 log(person["name"]);
 
-// -------
-
 log(person.isDeveloper);
-log(person.isPositive); // undefined, так как свойство отсутствует. но не ошибка
+log(person.isPositive);
+// log(person.isPositive.qwerty); // error
+log(person.isPositive?.qwerty); // undefined
 
 log(person.address);
 log(person.address.country, person.address.city, person.address.street);
 
-// ------
-
-// log(person.0) // error
+// ---------
+// log(person.0);
 log(person[0], person["0"]);
 
-// log(person.last name); // error
+// log(person.last name);
 log(person["last name"]);
 
 delete person[0];
-log(person[0], person["0"]);
+log(person[0]);
 
-// -----
-
+// ---------
 person.greet();
 person.greetSecond();
 
-const firstName = person.name;
-log(firstName);
+const prevName = person.name;
+log(prevName);
 
-person.name = "Alex"; // у объекта созданного с помощью const значение в свойстве можно менять
-log(person.name, firstName);
+person.name = "Alex";
+log(person.name, prevName);
 
-// ------
+// -----------
 
-log(person.isHappy); // undefined
-person.isHappy = true; // присвоили новое значение
+log(person.isHappy);
+person.isHappy = true;
 log(person.isHappy);
 
-// -------
+// ---------------
 
-log(person.hobby); // динамический ключ
-log(person.id); // динамический ключ-значение
+log(person.hobby);
+log(person);
+log(person.id);
 
-log("age" in person); // проверка на наличие свойства в объекте
+// --------------
+
+log("age" in person);
 log("qwerty" in person);
 
-// ----------
+// --------------
 
 const newPerson = person;
-log(newPerson === person); // true, так как скопировалась ссылка на объект
+log(newPerson === person);
 
 newPerson.age = 20;
-log(newPerson.age, person.age); // Одинаковые значения
+log(newPerson === person);
+log(newPerson.age, person.age);
 
-// -----------------------------------------------------
+// --------------------------------
