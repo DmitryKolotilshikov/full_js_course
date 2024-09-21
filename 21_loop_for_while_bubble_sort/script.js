@@ -185,5 +185,6 @@ for (let i = 0; i < array.length; i++) {
 const array2 = [4, 33, 2, 1];
 
 log(array);
-log(array2.sort((a,b) => a - b));
-log(array2.sort((a,b) => a - b).reverse());
+log(array2.sort((a, b) => a - b));
+log(array2.sort((a, b) => b - a));
+log(array2.sort((a, b) => a - b).reverse());
