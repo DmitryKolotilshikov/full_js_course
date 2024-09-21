@@ -1,0 +1,16 @@
+.block {
+    background-color: #295683;
+    color: #fff;
+    padding: 2em;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+.block--xl {
+    padding: 3em;
+    font-size: 3rem;
+}
