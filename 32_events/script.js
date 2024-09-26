@@ -5,6 +5,7 @@ const log = console.log;
 const btn = document.querySelector("#btn");
 const block = document.querySelector("#block");
 const input = document.querySelector("#textField");
+const text = document.querySelector("p");
 
 log(btn);
 
@@ -76,6 +77,11 @@ btn.addEventListener("click", (e) => {
 
 window.addEventListener("resize", (e) => {
     log(e.target.innerWidth, e.target.innerHeight)
+})
+
+text.addEventListener("copy", (e) => {
+    e.preventDefault();
+    log("КОПИРОВАНИЕ ЗАПРЕЩЕНО!😬");
 })
 
 window.addEventListener("beforeunload", (e) => {
