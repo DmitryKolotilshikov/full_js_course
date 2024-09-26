@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: rgb(153, 179, 198);
+}
+
+.todo {
+    margin: 50px auto;
+    padding: 0.5em;
+    width: 500px;
+    border: 1px solid black;
+    background-color: rgb(210, 216, 206);
+}
+
+.text-field-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.text-field-wrapper input {
+    flex-grow: 3;
+    height: 30px;
+}
+.text-field-wrapper button {
+    flex-grow: 1;
+    height: 30px;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.todo-item {
+    width: 100%;
+    padding: 0.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid rgb(20, 85, 117);
+    background-color: burlywood;
+}
