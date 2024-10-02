@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+    <title>Events - propagation and delegation</title>
+    <style>
+      .borders {
+        padding: 1em;
+        border: 1px solid orangered;
+      }
+      .borders p {
+        border: 1px solid lightseagreen;
+      }
+      table {
+        width: max-content;
+        border-collapse: collapse;
+      }
+      td {
+        padding: 1em;
+        width: 80px;
+        height: 80px;
+        border: 1px solid lightseagreen;
+      }
+      .highlight {
+        background-color: cadetblue;
+      }
+    </style>
+</head>
+
+<body>
+  <div data-container class="borders">
+    <p>кликните <strong>тут</strong> и сработает обработчик на DIV</p>
+  </div>
+  <hr>
+  <table data-numpad>
+    <tr>
+      <td>7</td>
+      <td>8</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+    </tr>
+  </table>
+  <hr>
+  <section data-table></section>
+</body>
+
+</html>
