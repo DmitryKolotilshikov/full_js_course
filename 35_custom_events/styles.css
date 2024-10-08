@@ -1,0 +1,15 @@
+body {
+    margin: 100px;
+}
+
+button {
+    border: 1px solid black;
+    padding: 1em;
+    text-align: center;
+    background-color: #B8001F;
+    color: white;
+}
+
+.subscription {
+    background-color: #507687;
+}
