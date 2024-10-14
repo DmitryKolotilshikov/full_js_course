@@ -1,0 +1,48 @@
+<svg display="none"
+    xmlns="http://www.w3.org/2000/svg">
+    <symbol viewBox="0 0 80 80" id="dice-1-icon">
+        <rect width="80" height="80" rx="10"/>
+        <circle cx="40.5" cy="40.5" r="6.5" fill="white"/>
+    </symbol>
+
+    <symbol viewBox="0 0 80 80" id="dice-2-icon">
+        <rect width="80" height="80" rx="10"/>
+        <circle cx="58.5" cy="58.5" r="6.5" fill="white"/>
+        <circle cx="22.5" cy="22.5" r="6.5" fill="white"/>
+    </symbol>
+
+    <symbol viewBox="0 0 80 80" id="dice-3-icon">
+        <rect width="80" height="80" rx="10"/>
+        <circle cx="58.5" cy="58.5" r="6.5" fill="white"/>
+        <circle cx="40.5" cy="40.5" r="6.5" fill="white"/>
+        <circle cx="22.5" cy="22.5" r="6.5" fill="white"/>
+    </symbol>
+
+    <symbol viewBox="0 0 80 80" id="dice-4-icon">
+        <rect width="80" height="80" rx="10"/>
+        <circle cx="22.5" cy="55.5" r="6.5" fill="white"/>
+        <circle cx="56.5" cy="55.5" r="6.5" fill="white"/>
+        <circle cx="56.5" cy="25.5" r="6.5" fill="white"/>
+        <circle cx="22.5" cy="25.5" r="6.5" fill="white"/>
+    </symbol>
+
+    <symbol viewBox="0 0 80 80" id="dice-5-icon">
+        <rect width="80" height="80" rx="10"/>
+        <circle cx="16.5" cy="55.5" r="6.5" fill="white"/>
+        <circle cx="64.5" cy="55.5" r="6.5" fill="white"/>
+        <circle cx="64.5" cy="25.5" r="6.5" fill="white"/>
+        <circle cx="16.5" cy="25.5" r="6.5" fill="white"/>
+        <circle cx="40.5" cy="40.5" r="6.5" fill="white"/>
+    </symbol>
+
+    <symbol viewBox="0 0 80 80" id="dice-6-icon">
+        <rect width="80" height="80" rx="10"/>
+        <circle cx="40.5" cy="55.5" r="6.5" fill="white"/>
+        <circle cx="16.5" cy="55.5" r="6.5" fill="white"/>
+        <circle cx="64.5" cy="55.5" r="6.5" fill="white"/>
+        <circle cx="64.5" cy="25.5" r="6.5" fill="white"/>
+        <circle cx="16.5" cy="25.5" r="6.5" fill="white"/>
+        <circle cx="40.5" cy="25.5" r="6.5" fill="white"/>
+    </symbol>
+</svg>
+
