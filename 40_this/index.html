@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <title>This</title>
+</head>
+
+<body>
+    <button id="myButton">Click me</button>
+    <script>
+        const button = document.getElementById('myButton');
+        button.addEventListener('click', function () {
+            console.log(this); // Выведет сам элемент button
+        });
+    </script>
+</body>
+
+</html>
