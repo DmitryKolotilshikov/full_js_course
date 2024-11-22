@@ -40,6 +40,34 @@ userOlga.greet();
 // В JavaScript класс – это разновидность функции 
 log(typeof User); // function
 
+// ------- new Function - Функция-конструктор --------
+
+function UserFnClass (name) {
+    this.name = name;
+
+    this.greeting = function () {
+        log(`Hello, I am ${this.name}`)
+    }
+}
+
+UserFnClass.prototype.greet = function () {
+    log(`Hello, I am ${this.name}`)
+}
+
+/* 
+    со стрелочной функцией тут потеря контекста (this)
+
+    UserFnClass.prototype.greet = () => {
+        log(`Hello, I am ${this.name}`)
+    } 
+*/
+
+const userFnVlad = new UserFnClass("Vlad");
+
+log(userFnVlad.name);
+userFnVlad.greeting();
+userFnVlad.greet();
+
 // ------- Геттеры и Сеттеры. Класс с приватными полями --------
 
 class User1 {
