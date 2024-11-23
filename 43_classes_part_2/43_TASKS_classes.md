@@ -20,27 +20,24 @@
 4) listProducts() — вывести список товаров в корзине.
  
 ```JavaScript
-  const bread = new Product('Хлеб', 30);
-  const apple = new Product('Яблоко', 50);
-  const milk = new Product('Молоко', 60);
-
   const cart = new Cart();
 
-  cart.addProduct(bread);
-  cart.addProduct(bread);
-  cart.addProduct(apple);
-  cart.addProduct(milk);
+  const bread = new Product("Хлеб", 30);
+  const apple = new Product("Яблоко", 50);
+  const milk = new Product("Молоко", 60);
 
-  cart.listProducts();
+  // cart.addProduct(apple);
+  // cart.addProduct(milk);
 
-  log(`Общая стоимость: ${cart.getTotalPrice()} руб.`);
+  cart.addProduct(bread, apple, milk);
 
-  cart.removeProduct('Хлеб');
-  cart.removeProduct('Хлеб1111');
+  const removedProduct = cart.removeProduct("Молоко");
 
-  cart.listProducts();
+  log(`${removedProduct} удален из корзины`)
 
-  log(`Общая стоимость после удаления: ${cart.getTotalPrice()} руб.`);
+  log(cart.listOfProducts)
+
+  log(`Общая сумма товаров в корзине: ${cart.getTotalPrice()}`);
 ```
 
 <hr/>

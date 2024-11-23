@@ -29,67 +29,47 @@ class Product {
 }
 
 class Cart {
-    constructor() {
-        this.products = []; // Список товаров в корзине
+    #products = [];
+
+    constructor() {}
+
+    addProduct(...product) {
+        this.#products.push(...product);
+
+        product.forEach(product => log(`${product.name} добавлен в корзину`));
     }
 
-    // Метод добавления товара
-    addProduct(product) {
-        this.products.push(product);
-        log(`${product.name} добавлен в корзину.`);
-    }
-
-    // Метод удаления товара по названию
     removeProduct(productName) {
-        const newProducts = this.products.filter((product) => product.name !== productName);
+        this.#products = this.#products.filter((product) => product.name !== productName);
 
-        if (newProducts.length !== this.products.length) {
-            this.products = newProducts;
-
-            log(`${productName} удалён из корзины! ⬅️⬅️⬅️`);
-            return;
-        }
-
-        log(`Товар с названием "${productName}" не найден в корзине!`);
+        return productName;
     }
 
-    // Метод подсчёта общей стоимости
     getTotalPrice() {
-        return this.products.reduce((total, product) => total + product.price, 0);
+       const totalPrice = this.#products.reduce((total, product) => total + product.price, 0);
+       return totalPrice;
     }
 
-    // Метод для вывода списка товаров
-    listProducts() {
-        if (this.products.length === 0) {
-            log('😬 Корзина пуста! 😬');
-            return;
-        }
-        log('--- Товары в корзине: ---');
-
-        this.products.forEach((product, index) => {
-            log(`${index + 1}. ${product.name} — ${product.price} руб.`);
-        });
+    get listOfProducts() {
+        return this.#products;
     }
 }
 
-const bread = new Product('Хлеб', 30);
-const apple = new Product('Яблоко', 50);
-const milk = new Product('Молоко', 60);
-
 const cart = new Cart();
 
-cart.addProduct(bread);
-cart.addProduct(bread);
-cart.addProduct(apple);
-cart.addProduct(milk);
+const bread = new Product("Хлеб", 30);
+const apple = new Product("Яблоко", 50);
+const milk = new Product("Молоко", 60);
 
-cart.listProducts();
+// cart.addProduct(apple);
+// cart.addProduct(milk);
 
-log(`Общая стоимость: ${cart.getTotalPrice()} руб.`);
+cart.addProduct(bread, apple, milk);
 
-cart.removeProduct('Хлеб');
-cart.removeProduct('Хлеб1111');
+const removedProduct = cart.removeProduct("Молоко");
 
-cart.listProducts();
+log(`${removedProduct} удален из корзины`)
 
-log(`Общая стоимость после удаления: ${cart.getTotalPrice()} руб.`);
+log(cart.listOfProducts)
+
+log(`Общая сумма товаров в корзине: ${cart.getTotalPrice()}`);
