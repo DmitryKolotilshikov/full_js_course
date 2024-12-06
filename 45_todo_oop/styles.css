@@ -1,0 +1,96 @@
+:root {
+  --neon-inner: #35beaf;
+  --neon-outer: #35b9aa;
+  --completed-todo: #2ea396;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #4d6f93 0%, #a84545a6 100%);
+}
+
+h1 {
+  text-align: center;
+  margin: 0;
+  padding: 20px 0 0 0;
+  color: #e1e1e1;
+}
+
+.container {
+  padding: 50px 10px 0 10px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.search-input {
+  padding: 0 10px;
+  width: 100%;
+  height: 45px;
+  font-size: 20px;
+  background: none;
+  border: none;
+  border-radius: 3px;
+  outline: 2px solid #21303f;
+  transition: .22s box-shadow, .22s color;
+}
+
+.search-input:focus-visible {
+  box-shadow: 0 0 15px 15px var(--neon-outer), inset 0 0 25px 10px var(--neon-inner);
+  color: #fff;
+}
+
+.search-input::placeholder {
+  color: #3c3c3c;
+  font-size: 16px;
+  font-style: italic;
+}
+
+.todos-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: 8px;
+}
+
+.todo-item {
+  padding: 0 10px;
+  height: 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  border: 1px solid black;
+}
+
+.todo-item span {
+  pointer-events: none;
+  user-select: none;
+}
+
+.todo-item.completed {
+  background-color: var(--completed-todo);
+}
+
+.todo-item.completed span {
+  text-decoration: line-through;
+}
+
+.todo-item:hover {
+  border: 1px solid var(--neon-inner);
+  box-shadow: 0 0 10px 5px var(--neon-outer), inset 0 0 10px 5px var(--neon-inner);
+  color: #fff;
+}
