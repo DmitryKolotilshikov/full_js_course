@@ -1,4 +1,4 @@
-// fetch, async, await
+// fetch, async, await, try, catch, finally
 
 // fetch('https://jsonplaceholder.typicode.com/todos?_limit=10')
 //       .then(response => response.json())
