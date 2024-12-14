@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Bebas+Neue&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #4d6f93 0%, #a84545a6 100%);
+}
+
+.container {
+  padding: 10px 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-section {
+  width: 100%;
+  max-width: 1000px;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.title {
+  color: #fff;
+  font-size: 42px;
+  font-family: "Baloo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  margin: 0;
+}
+
+.form-block {
+  width: 100%;
+  max-width: 320px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 10px;
+}
+
+.control-field {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 2px;
+}
+
+.form-label {
+  color: #fff;
+  font-size: 14px;
+}
+
+.form-control {
+  height: 38px;
+  padding: 0 5px;
+  font-size: 18px;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #20222b;
+  border: none;
+  border-radius: 4px;
+}
+
+.form-control:focus-visible {
+  outline: 1px solid #fff;
+}
+
+.form-control--email {
+  text-transform: initial;
+}
+
+.btn {
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: 700;
+  text-transform: capitalize;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn:focus-visible {
+  outline: 1px solid #fff;
+}
+
+.submit-btn {
+  margin: 5px 0 0 0;
+  background-color: #377bcf;
+}
+
+.users-container {
+  margin: 0 auto;
+  padding: 20px 0 50px 0;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.user-card {
+  max-width: 250px;
+  height: 280px;
+  flex-shrink: 0;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: #557b97;
+  color: #fff;
+  position: relative;
+
+  h3 {
+    margin: 0;
+  }
+
+  img {
+    width: 100%;
+    object-fit: cover;
+    margin-top: auto;
+  }
+
+  p {
+    margin: 5px 0;
+  }
+
+  span {
+    font-size: 12px;
+  }
+
+  .user-remove-btn {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    cursor: pointer;
+  }
+}
