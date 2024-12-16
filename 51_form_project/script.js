@@ -104,25 +104,15 @@ renderUsers = () => {
     usersContainer.innerHTML = "";
 
     users.forEach(user => {
-        const userCard = document.createElement("div");
-        userCard.classList.add("user-card");
-        const userName = document.createElement("h3");
-        const userCity = document.createElement("p");
-        const userEmail = document.createElement("span");
-        const userAvatar = document.createElement("img");
-        const userRemoveBtn = document.createElement("button");
-        userRemoveBtn.classList.add("user-remove-btn");
-        userRemoveBtn.dataset.userId = user.id;
-
-        userName.textContent = `${user.name}`;
-        userCity.textContent = `City: ${user.city}`;
-        userEmail.textContent = `Email: ${user.email}`;
-        userRemoveBtn.textContent = "❌";
-        userAvatar.src = user.avatar;
-
-        userCard.append(userName, userCity, userEmail, userAvatar, userRemoveBtn);
-
-        usersContainer.append(userCard);
+        usersContainer.insertAdjacentHTML("beforeend", `
+            <div class="user-card">
+                <h3>${user.name}</h3>
+                <p>City: ${user.city}</p>
+                <span>Email: ${user.email}</span>
+                <img src="${user.avatar}"/>
+                <button class="user-remove-btn" data-user-id="${user.id}">❌</button>
+            </div>
+        `)
     })
 }
 
