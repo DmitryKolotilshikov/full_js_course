@@ -4,38 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
     <title>Form project</title>
 </head>
 
 <body>
     <div class="container">
         <section class="login-section">
-            <h1 class="title">Users</span></h1>
+            <h1 class="title">Users App</h1>
 
             <div class="form-block">
-                <form class="form" data-form>
+                <form class="form" data-create-user-form>
                     <div class="control-field">
                         <label for="nameId" class="form-label">Name</label>
-                        <input type="text" name="userName" id="nameId" class="form-control" required minlength="2"
-                            maxlength="13" />
+                        <input type="text" class="form-control" id="nameId" name="userName" required minlength="2"
+                            maxlength="23">
                     </div>
 
                     <div class="control-field">
                         <label for="cityId" class="form-label">City</label>
-                        <input type="text" name="userCity" id="cityId" class="form-control" required minlength="2"
-                            maxlength="30" />
+                        <input type="text" class="form-control" id="cityId" name="userCity" required minlength="2"
+                            maxlength="20">
                     </div>
 
                     <div class="control-field">
                         <label for="emailId" class="form-label">Email</label>
-                        <input type="email" name="userEmail" id="emailId" class="form-control form-control--email"
-                            required />
+                        <input type="email" class="form-control form-control--email" id="cityemailIdId" name="userEmail"
+                            required>
                     </div>
 
                     <div class="control-field">
-                        <label for="imagesUrlId" class="form-label">Email</label>
+                        <label for="imagesUrlId" class="form-label">Images</label>
 
                         <select name="userImageUrl" id="imagesUrlId" class="form-control form-control--images" required>
                             <option value="">Image URL</option>
@@ -67,17 +67,16 @@
                         </select>
                     </div>
 
-                    <button type="submit" class="btn submit-btn" data-form-submit-btn>Create User</button>
+                    <button type="submit" class="btn submit-btn">Create User</button>
                 </form>
             </div>
         </section>
     </div>
     <hr>
 
-    <section class="users-container" data-users-container></section>
+    <div class="users-container" data-users-container></div>
 
-    <dialog data-edit-user-form-dialog class="edit-form-dialog">
-    </dialog>
+    <dialog class="edit-form-dialog" data-edit-user-form-dialog></dialog>
 </body>
 
 </html>

@@ -28,9 +28,9 @@ body {
 }
 
 .title {
+  margin: 0;
   color: #fff;
   font-size: 42px;
-  margin: 0;
 }
 
 .form-block {
@@ -131,34 +131,35 @@ body {
   position: relative;
 
   h3 {
-    margin: 0;
+      margin: 0;
   }
 
   img {
-    width: 100%;
-    object-fit: cover;
-    margin-top: auto;
+      width: 100%;
+      object-fit: cover;
+      margin-top: auto;
   }
 
   p {
-    margin: 5px 0;
+      margin: 5px 0;
   }
 
   span {
-    font-size: 12px;
+      font-size: 12px;
   }
 
   .user-edit-btn {
-    position: absolute;
-    top: 3px;
-    right: 42px;
-    cursor: pointer;
+      position: absolute;
+      top: 3px;
+      right: 42px;
+      cursor: pointer;
   }
+
   .user-remove-btn {
-    position: absolute;
-    top: 3px;
-    right: 3px;
-    cursor: pointer;
+      position: absolute;
+      top: 3px;
+      right: 3px;
+      cursor: pointer;
   }
 }
 
@@ -175,17 +176,17 @@ body {
   translate: -50% -50%;
 
   .form-label {
-    color: #000;
+      color: #000;
   }
 
   .close-edit-form-btn {
-    position: absolute;
-    top: 3px;
-    right: 3px;
-    cursor: pointer;
+      position: absolute;
+      top: 3px;
+      right: 3px;
+      cursor: pointer;
   }
 }
 
 .edit-form-dialog::backdrop {
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
 }
