@@ -119,14 +119,14 @@ body {
   max-width: 250px;
   height: 280px;
   flex-shrink: 0;
-  border: 1px solid black;
+  border: 1px solid #2f2f2f;
   border-radius: 5px;
   padding: 5px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  background-color: #557b97;
+  background: linear-gradient(180deg, #4d6f93 0%, #a84545a6 100%);
   color: #fff;
   position: relative;
 
@@ -160,6 +160,10 @@ body {
     right: 3px;
     cursor: pointer;
   }
+}
+
+.user-card:hover {
+  box-shadow: 0 0 15px 8px #377bcf;
 }
 
 .edit-form-dialog {
