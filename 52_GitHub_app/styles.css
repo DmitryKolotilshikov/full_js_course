@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-form {
+    display: flex;
+    gap: 10px;
+}
+
+.search-input {
+    flex: 1;
+    padding: 8px;
+}
+
+.search-button {
+    padding: 8px 16px;
+    cursor: pointer;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+.user-info-container {
+    margin-top: 20px;
+}
+
+.user-info-container img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.repos-container {
+    margin-top: 20px;
+}
+
+.repo {
+    margin: 5px 0;
+    padding: 5px;
+    background: #f1f1f1;
+    border-radius: 4px;
+}
