@@ -10,8 +10,9 @@ const firstInput = document.querySelector("[data-first-input]");
 const secondInput = document.querySelector("[data-second-input]");
 
 const BASE_URL = "https://open.er-api.com/v6/latest";
-let firstSelectedCurrency = 'USD';
-let secondSelectedCurrency = 'BYN';
+const FIRST_DEFAULT_CURRENCY = "USD";
+const SECOND_DEFAULT_CURRENCY = "BYN";
+
 let rates = {};
 
 // select events
@@ -42,18 +43,14 @@ const updateExchangeRates = async () => {
         const data = await response.json();
 
         rates = data.rates;
-        firstSelectedCurrency = firstSelect.value;
-        secondSelectedCurrency = secondSelect.value;
-
-        populateSelect(data.rates);
-        renderInfo(data.rates);
+        renderInfo();
     } catch (error) {
         console.error(error.message);
     }
 }
 
 // render info
-const renderInfo = (rates) => {
+const renderInfo = () => {
     comparisonInfo.textContent = `1 ${firstSelect.value} = ${rates[secondSelect.value]} ${secondSelect.value}`;
 
     firstInput.value = rates[firstSelect.value];
@@ -61,16 +58,16 @@ const renderInfo = (rates) => {
 }
 
 // populate selects
-const populateSelect = (rates) => {
+const populateSelect = () => {
     firstSelect.innerHTML = "";
     secondSelect.innerHTML = "";
 
     for (const currency of Object.keys(rates)) {
         firstSelect.innerHTML += `
-            <option value="${currency}" ${currency === firstSelectedCurrency ? "selected" : ""}>${currency}</option>
+            <option value="${currency}" ${currency === FIRST_DEFAULT_CURRENCY ? "selected" : ""}>${currency}</option>
         `
         secondSelect.innerHTML += `
-            <option value="${currency}" ${currency === secondSelectedCurrency ? "selected" : ""}>${currency}</option>
+            <option value="${currency}" ${currency === SECOND_DEFAULT_CURRENCY ? "selected" : ""}>${currency}</option>
         `
     }
 }
@@ -78,12 +75,12 @@ const populateSelect = (rates) => {
 // getInitialRates - initial fn to populate selects
 const getInitialRates = async () => {
     try {
-        const response = await fetch(`${BASE_URL}/${firstSelectedCurrency}`);
+        const response = await fetch(`${BASE_URL}/${FIRST_DEFAULT_CURRENCY}`);
         const data = await response.json();
 
         rates = data.rates;
-        populateSelect(data.rates);
-        renderInfo(data.rates);
+        populateSelect();
+        renderInfo();
     } catch (error) {
         console.error(error.message);
     }
