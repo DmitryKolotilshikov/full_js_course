@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" type="module" defer></script>
+    <title>Exchange rates</title>
+</head>
+
+<body>
+    <a href="https://www.exchangerate-api.com" style="display: none;">Rates By Exchange Rate API</a>
+
+    <div class="container">
+        <img src="exchange-money-svgrepo-com.svg" alt="svg-logo" class="logo">
+
+        <h1 class="title">Exchange rates</h1>
+
+        <section class="info-container">
+            <div class="controls-wrapper">
+                <select name="firstSelect" class="select-control" data-first-select></select>
+                <button data-swap-btn class="swap-btn">swap</button>
+                <select name="secondSelect" class="select-control" data-second-select></select>
+            </div>
+
+            <div class="controls-wrapper">
+                <input type="number" class="input-control" data-first-input>
+                <span>=</span>
+                <input type="number" class="input-control" data-second-input>
+            </div>
+
+            <p data-comparison-info></p>
+        </section>
+    </div>
+</body>
+
+</html>
